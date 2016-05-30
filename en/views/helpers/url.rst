@@ -13,7 +13,7 @@ overriding the core helper with an application one. See the
 Generating URLs
 ===============
 
-.. php:method:: build(mixed $url = NULL, boolean $full = false)
+.. php:method:: build(mixed $url = null, boolean $full = false)
 
 Returns a URL pointing to a combination of controller and action.
 If ``$url`` is empty, it returns the ``REQUEST\_URI``, otherwise it
@@ -88,6 +88,21 @@ URL for named route::
     //     ]
     // );
     /products/i-m-slug
+
+If you are generating URLs for CSS, Javascript or image files there are helper
+methods for each of these asset types::
+
+    // Outputs /img/icon.png
+    $this->Url->image('icon.png');
+
+    // Outputs /js/app.js
+    $this->Url->script('app.js');
+
+    // Outputs /css/app.css
+    $this->Url->css('app.css');
+
+.. versionadded:: 3.2.4
+    The asset helper methods were added in 3.2.4.
 
 For further information check
 `Router::url <http://api.cakephp.org/3.0/class-Cake.Routing.Router.html#_url>`_

@@ -104,15 +104,19 @@ control structures listed below has a similar closing syntax: ``endif``,
 a ``semicolon`` after each structure (except the last one), there is a
 ``colon``.
 
-The following is an example using ``foreach``::
+The following is an example using ``foreach``:
+
+.. code-block:: php
 
   <ul>
   <?php foreach ($todo as $item): ?>
-  <li><?=$item?></li>
+  <li><?= $item ?></li>
   <?php endforeach; ?>
   </ul>
 
-Another example, using if/elseif/else. Notice the colons::
+Another example, using if/elseif/else. Notice the colons:
+
+.. code-block:: php
 
   <?php if ($username === 'sally'): ?>
      <h3>Hi Sally</h3>
@@ -764,7 +768,7 @@ CakePHP, les classes de vue ont quelques conventions:
 * Les classes de View doivent être suffixées avec ``View``. Par exemple
   ``PdfView``.
 * Quand vous référencez les noms de classe de vue, vous devez omettre le
-  suffixe ``View``. Par exemple ``$builder->viewClass('Pdf');``.
+  suffixe ``View``. Par exemple ``$this->viewBuilder()->className('Pdf');``.
 
 Vous voudrez aussi étendre ``View`` pour vous assurer que les choses
 fonctionnent correctement::
